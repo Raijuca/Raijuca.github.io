@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Banco de dados</title>
+    <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="TI_Verde.css">
+</head>
+  <body>
+<header>
+<ul id="menu">
+
+<a href="Index.html"><li><figure><img src="Imagens/Folha.png" height="145px" title="TI verde" alt="imagem"/><figcaption>TI verde</figcaption></figure></li></a>
+<a href="nuvem.html"><li><figure><img src="Imagens/Nuvem.png" height="145px" title="Computação em nuvem"alt="imagem" /><figcaption>Computação em nuvem</figcaption></figure></li></a>
+<a href="BD.html"><li><figure><img src="Imagens/BD.png" height="145px" title="Banco de Dados" alt="imagem"/><figcaption>Banco de Dados</figcaption></figure></li></a>
+<a href="form.html"><li><figure><img src="Imagens/Form.png" height="145px" title="Banco de Dados" alt="imagem"/><figcaption>Formulário</figcaption></figure></li></a>
+</ul>
+</header>
+<div id="text">
+<h1> Conceitos sobre Banco de Dados</h1>
+<ul>
+<li>Dado: fato do mundo real que está registrado </li>
+<p>exemplos: endereço, data, nome etc.</p>
+<li>Informação: fato útil que pode ser extraído direta ou indiretamente a partir dos dados</li>
+<p>exemplos: endereço de entrega, idade...</p>
+<li>Banco de Dados (BD): coleção de dados inter-relacionados e persistentes que representa um subconjunto dos fatos presentes em um domínio de aplicação (universo de discurso) </li>
+</ul>
+<p>Antes de entender o que é um banco de dados, é importante saber a diferença entre as palavras “dados” e “informações”. Os dados são os fatos brutos, em sua forma primária, e podem não fazer nenhum sentido quando estão isolados; já as informações são o agrupamento de dados organizados, de forma que façam sentido e gerem algum conhecimento.</p>
+<p>Segundo Korth, um banco de dados “é uma coleção de dados inter-relacionados, representando informações sobre um domínio específico”, ou seja, sempre que for possível agrupar informações que se relacionam e tratam de um mesmo assunto, posso dizer que tenho um banco de dados.” </p>
+<p>Podemos exemplificar situações clássicas como uma lista telefônica, um catálogo de CDs ou um sistema de controle de RH de uma empresa.</p>
+<h3>SGBD</h3>
+<p>Já um sistema de gerenciamento de banco de dados (SGBD) é um software que possui recursos capazes de manipular as informações do banco de dados e interagir com o usuário. Exemplos de SGBDs são: Oracle, SQL Server, DB2, Postgre, MySQL, o próprio Access ou Paradox, entre outros.</p>
+<p>A informação é muitas vezes a coisa mais valiosa das empresas, mantê-las e poder acessá-las sempre que necessário é primordial para tomar decisões importantes. Mas controlar o acesso a essas informações também é importantíssimo. Já pensou se elas caíssem em mãos erradas? E a perda de informações? Já imaginou se estragasse o HD do servidor onde está o banco de dados? Backup é uma forma de garantir que informações não serão perdidas.</p>
+<p>Analisando os 5 primeiros SGBDs, temos Oracle em 1º lugar com um pequeno aumento no mês de março comparado com o mês de abril de 2020. O MySQL se mantém no 2º lugar e pode aparecer em 2020 como um concorrente forte para o primeiro lugar. Em 3º lugar está a Microsoft SQL Server, que vem caindo de pontuação em relação a março/2019. O PostgreSQL aparece em 4º lugar, já o MongoDB um banco de dados não SQL (NoSQL) permanece em 5º lugar.</p>    
+<h3>Abstração de dados</h3>
+ <p>O sistema de banco de dados deve garantir uma visão totalmente abstrata do banco de dados para o usuário, ou seja, para o usuário do banco de dados pouco importa qual unidade de armazenamento está sendo usada para guardar seus dados, contanto que os mesmos estejam disponíveis no momento necessário.</p>
+<p>Esta abstração se dá em três níveis:</p>
+<ol>
+<li>Nível de visão do usuário: as partes do banco de dados que o usuário tem acesso de acordo com a necessidade individual de cada usuário ou grupo de usuários;</li>
+<li>Nível conceitual: define quais os dados que estão armazenados e qual o relacionamento entre eles;</li>
+<li>Nível físico: é o nível mais baixo de abstração, em que define efetivamente de que maneira os dados estão armazenados.</li>
+</ol>
+<h3>Modelo de Dados</h3>
+<p>Um modelo de dados são as ferramentas que o profissional escolhe para a organização das informações e descrição de dados, relacionamentos...</p>
+<p>Um projeto contém duas fases: Modelo Conceitual e Projeto Lógico.</p>
+<p>Essas etapas preparam o banco de dados antes dele existir, evitando erros e facilitando possíveis manutenções futuras.</p>
+<p>O modelo conceitual é a descrição do BD de maneira independente ao SGBD, ou seja, define quais os dados que aparecerão no BD, mas sem se importar com a implementação que se dará ao BD. Desta forma, há uma abstração em nível de SGBD. Uma das técnicas mais utilizadas dentre os profissionais da área é a abordagem entidade-relacionamento (ER), onde o modelo é representado graficamente através do diagrama entidade-relacionamento (DER).</p>
+<img src="Imagens/DER.png">
+<p>O modelo lógico descreve o BD no nível do SGBD, ou seja, depende do tipo particular de SGBD que será usado. Não podemos confundir com o Software que será usado. O tipo de SGBD que o modelo lógico trata é se ele é relacional, orientado a objetos, hierárquico etc. O SGBD relacional é o mais conhecido. Nele, os dados são organizados em tabelas.</p>
+<h2>Modelagem de dados</h2>
+<p>Os modelos de dados são ferramentas que permitem demonstrar como serão construídas as estruturas de dados que darão suporte aos processos de negócios, como os dados estarão organizados e quais os relacionamentos que pretendemos estabelecer entre eles.</p>
+<p>Os principais objetivos da modelagem de dados são: representar o ambiente observado, documentar e normalizar, fornecer processos de validação e observar processos de relacionamentos entre objetos.</p>
+<h3>Esses modelos consistem em 3 perspectivas:</h3>
+<ol>
+<li>Conceitual: Como representação de alto nível e com foco no ponto de vista do usuário criador dos dados. É sempre o primeiro modelo a ser desenvolvido e muito fácil de ser compreendido, pois não há limitações ou tecnologias específicas.</li>
+<li>Lógica: agrega detalhes de implementação e leva em conta as regras e algumas limitações de recursos padronizados. Aqui é possível definir atributos que serão as chaves para a estrutura.</li>
+<li>Física: demonstra os dados fisicamente e leva em consideração todas as regras e limitações do banco de dados. Obedece padrões e validações. E a partir daqui que o modelo deve estar espelhado para o seu banco de dados final.</li>
+</ol>
+<p>Embora Modelo Lógicos e Modelos Físico parecerem similares, e eles de fato são, o nível de detalhes que eles modelam pode ser significativamente diferente. Isso porque o objetivo de cada diagrama é diferente – podemos usar um Modelo Lógicos para explorar conceitos do domínio com os envolvidos no projeto e Modelos Físico para definir o projeto do banco de dados.</p>
+<h3>Modelagem Transacional e Informacional</h3>
+<p>Os transacionais são aqueles projetados para atender à sistemas transacionais, ou seja, que tenham foco nos dados provenientes de interações de um sistema informatizado com suas fontes de dados. Ela prima armazenar e recuperar os dados referentes às transações. A preocupação nesse caso é com a normalização dos atributos, útil ao processamento de informações imediatas e não ao gerenciamento e tomada de decisões.</p>
+<p>Por outro lado, a modelagem informacional – ou dimensional – tem objetivo oposto, ela visa atender a necessidade da tomada de decisão e para isso se baseia em grandes volumes de dados da base transacional. Nesse caso, o histórico é essencial e necessita de muita armazenagem.</p>
+<h3>Sistemas Cliente-Servidor</h3>
+<p>Na modelagem de dados também é importante saber sobre a estrutura fundamental dos sistemas, que normalmente são Cliente-Servidor, e consiste em estações de trabalho conectadas via rede aos servidores. Essas estações oferecem interfaces apropriadas para uso dos servidores, bem como processamento para aplicações.</p>
+<p>Já no sistema cliente-servidor de três camadas, a indicação é para web, já que possui uma cada intermediária entre o cliente e o servidor de banco de dados. Essa camada é o servidor de aplicações ou servidor web e pode armazenar regras de negócio para acessar os dados do servidor.</p>
+<h3>Fundamentos</h3>
+<p>Certos conceitos são utilizados na modelagem conceitual para descrever os papéis de cada componente do domínio analisado. Dentre eles, podemos citar:</p>
+<ul>
+<li>Instância: denomina uma ocorrência, um registro que existe ou passou a existir de uma entidade;</li>
+<li>Entidade: define qualquer coisa que seja identificável, singular e tenha existência bem delimitada;</li>
+<li>Atributo: é usado para referir-se à cada característica possuída pelas instâncias de uma entidade ou de um relacionamento e sua representação no DER se dá em forma de balões;</li>
+<li>Relacionamento: descreve um evento significativo que ocorre entre instâncias de duas entidades e é representado por um losango;</li>
+<li>Cardinalidade: conceito usado para dizer quantas vezes uma instância de uma entidade pode se relacionar com instâncias de outra entidade, também referenciado como “grau de relacionamento”;</li>
+<li>Condicionalidade: responsável por comunicar se a existência de uma instância de uma entidade está condicionada à existência de uma instância de outra entidade.</li>
+</ul>
+
+<h3>Relacionamentos entre instâncias de entidades</h3>
+<p>São comumente efetivados com estas 3 cardinalidades:</p>
+<ul>
+<li>“Um” para “Um” (1:1): uma instância de uma entidade pode ou deve se relacionar com uma e apenas uma instância de outra entidade;</li>
+<li>“Um” para “Muitos” (1:N): uma instância de uma entidade pode ou deve se relacionar com uma ou mais instâncias de outra entidade — é com toda certeza a cardinalidade mais encontrada em bancos de dados;</li>
+<li>“Muitos” para “Muitos” (N:N): uma ou mais instâncias de uma entidade podem ou devem se relacionar com uma ou mais instâncias de outra entidade — esse tipo de relacionamento transforma-se em uma entidade a partir da modelagem lógica.</li>
+</ul>
+<h3>Condição de relacionamentos</h3>
+<p>Podem ser regidos sob 2 condicionalidades (exemplificadas abaixo):</p>
+<ul>
+<li>Parcial: quando instâncias de uma entidade Telefone podem estar relacionadas com instâncias de Pessoa em uma agenda, ou seja, onde o cadastro de números de telefone sem nome é permitido;</li>
+<li>Total: quando instâncias de uma entidade Carro devem estar relacionadas com instâncias de Cliente para entrar em uma oficina, ou seja, onde o cadastro de carros sem dono é proibido.</li>
+</ul>
+<h3>Entidades de uma relação 1:N</h3>
+<p>Duas categorias são usadas para defini-las:</p>
+<ul>
+<li>“Fortes”: para entidades do lado 1 da relação;</li>
+<li>“Fracas”: para entidades do lado N.</li>
+</ul>
+<h2>Projeto de Banco de Dados</h2>
+<p>O projeto de banco de dados é fundamental para o sucesso na implementação da tecnologia de banco de dados em uma empresa. Para pequenos sistemas muitas vezes o responsável pelo projeto parte diretamente para a criação do banco de dados físico e em seguida a criação das tabelas, colunas e índices. Porém quando se pensa em um banco de dados para uma empresa grande, dependendo do tamanho do projeto é fundamental um bom processo de projeto de banco de dados para que se possa garantir que o usuário terá todos os seus requisitos de informação atendidos na forma de informações disponíveis no banco de dados, além de outras considerações já vistas anteriormente tais como disponibilidade, desempenho e confiabilidade do banco de dados.</p>
+<p>Um projeto de banco de dados é caracterizado por um processo que possui fases distintas e com aspectos diferentes, mas que tem como objetivo final a implementação de um banco de dados que atenda às necessidades de informação do usuário e aos requisitos não funcionais de disponibilidade, desempenho e confiabilidade esperados.</p>
+<p>As Três fases que fazem parte de um projeto de banco de dados:</p>
+<ol>
+<li>Modelo conceitual – Representa os conceitos do negócio e as associações existentes entre estes conceitos. Também são representados os atributos assim como as regras de negócio que regulam as associações e conceitos do negócio. Este modelo é independente da tecnologia de implementação usada para o banco de dados e por isto é a etapa mais adequada para o envolvimento do usuário que não precisa ter conhecimentos técnicos. As características principais deste modelo são:</li>
+<p>Visão Geral do negócio;</p>
+<p>Facilidade de entendimento entre usuários e desenvolvedores;</p>
+<p>Possui somente as entidades, relacionamentos e atributos principais.</p>
+<p>Os principais produtos da fase de projeto conceitual são:</p>
+<ul>
+<li>O diagrama de entidade e relacionamentos, também conhecido por modelo de entidade relacionamentos;</li>
+<li>Lista de Regras de Restrição de Integridade.</li>
+</ul>
+<br/>
+<li>Modelo Lógico – Representa as estruturas de dados a serem implementadas e suas características considerando os limites impostos pelo modelo de dados usado para implementação do banco de dados. (banco de dados hierárquico, banco de dados de rede, banco de dados relacional etc.). As características principais deste modelo são:</li>
+<ul>
+<li>É derivado do modelo conceitual</li>
+<li>Possui entidades associativas em lugar de relacionamentos n:m</li>
+<li>Define as chaves primárias das entidades</li>
+<li>Define as chaves estrangeiras entre as entidades</li>
+<li>Normalização até a 3° forma normal</li>
+<li>Adequado ao padrão de nomenclatura adotado pela empresa</li>
+<li>As Entidades e atributos são documentados em um Dicionário de Dados</li>
+</ul>
+<p>O principal produto da fase de projeto lógico é o modelo relacional.</p>
+<li>Modelo Físico – Este modelo representa a implementação do modelo lógico considerando algum tipo particular de tecnologia de banco de dados e os requisitos não funcionais (desempenho, disponibilidade, segurança) que foram identificados pelo analista de requisitos. As características principais deste modelo são:</li>
+<ul>
+<li>Elaborado a partir do modelo lógico;</li>
+<li>Pode variar segundo a tecnologia usada para implementação do banco de dados;</li>
+<li>Possui tabelas físicas (log, líder etc.);</li>
+<li>Possui colunas físicas (replicação);</li>
+</ul>
+<p>No modelo físico, a linguagem SQL (Structured Query Language), é a linguagem padrão para definição, manipulação e controle de uso das estruturas de dados.</p>
+</ol>
+<p>Existem muitos Sistemas Gerenciadores de Banco de Dados disponíveis no mercado. Como exemplo, podemos citar o PostgreSQL e o MySQL, que tem código aberto e são gratuitos. Também existe o Oracle, DB2, Sybase SQL Server, Informix e Microsoft SQL Server, que são pagos e não possuem código aberto, sendo bastante usados em corporações</p>
+<h3>Etapas no projeto de um Banco de dados:</h3>
+<ul>
+<li>Determinar qual o objetivo do projeto de Banco de Dados: Isto ajuda na determinação de quais os dados devem ser armazenados. É fundamental ter bem claro qual o objetivo a ser alcançado com o banco de dados. É fazer o acompanhamento das despesas, pedidos dos clientes, multas de trânsito, a evolução das vendas ou outro objetivo qualquer.</li>
+<li>Determinar as Entidades necessárias: Após definirmos os objetivos do Banco de Dados, as informações devem ser definidas e separadas em assuntos diferentes, tais como "Clientes", "Empregados", "Pedidos", pois cada um irá compor uma tabela no banco de dados. É importante considerar que conceitos diferentes devem ser representados como entidades e relacionamentos diferentes. Isto significa que não devemos misturar conceitos, assuntos, representando todos como apenas uma única entidade.</li>
+<li>Determinar os Atributos de cada Entidade: Definir quais informações devem ser mantidas em cada entidade. Por exemplo, a entidade Clientes poderia ter um atributo para o CPF Do Cliente, outro para o Nome Do Cliente e assim por diante. </li>
+<li>Determinar o identificador de cada Entidade: Determinar, em cada entidade, qual(is) atributo(s) será(ão) utilizado(s) como identificador de cada ocorrência na entidade. </li>
+<li>Determinar os Relacionamentos: Determinar as associações existentes entre as entidades do modelo de dados, identificando de que forma as entidades se relacionam, e representando os relacionamentos entre as entidades, detalhando a cardinalidade entre os relacionamentos. A cardinalidade especifica o número de vezes que uma ocorrência de uma entidade pode estar associada a ocorrências da outra entidade. Por exemplo, Clientes podem Fazer Vários Pedidos, então existe um relacionamento do tipo Um-para-vários entre a tabela Clientes (lado um) e a tabela Pedidos (lado vários). </li>
+<li>Normalizar a Estrutura do Banco de Dados: Antes de inserir muitos dados, ou até mesmo antes de inserir qualquer dado, verificar se a estrutura contém redundância de atributos nas entidades, eliminando a possibilidade de inconsistência nos dados causada por anomalias de atualização devido a redundância de atributos. Isto, normalmente, pode ser obtido através do processo de Normalização.</li>
+</ul>
+<h2>DER</h2>
+<p>DER, é a abreviação de Diagrama de Entidade Relacionamento. Esse diagrama nada mais é do que uma representação gráfica do MER (Modelo de entidade Relacionamentos).  Em termos conceituais,  podemos dizer que “Diagrama de Entidade Relacionamento“ é um modelo diagramático que descreve um modelo de dados.</p>
+<p>Na elaboração de um projeto de banco de dados, diagramas ER são usados para modelar e criar bancos de dados relacionais, na parte das regras lógicas desse negócio, em um modelo lógico de dados e no termo de tecnologia específica a ser colocada ( no modelo físico de dados). </p>
+<p>Em um modelo DER possuímos as entidades sendo substantivos concretos ou abstratos onde é possível guardar dados. Existem as entidades fortes, entidades fracas e entidades associativas.</p>
+<p>Um modelo DER possui também os relacionamentos que são uma ação entre as entidades, representados por um losango. Cada relacionamento possui uma cardinalidade que representa o número de interações entre as entidades. As cardinalidades podem ser de: 1-1(um para um), N-1(um para muitos) ou N-N(muitos para muitos).</p>
+<p>Cada entidade possui uma característica chamada de atributo. Eles podem ser descritivos, nominativos ou referenciais. Além disso existem os atributos Simples e Compostos. Quando um atributo representa um valor único da entidade é chamado de Atributo Identificador.</p>
+<p>Exemplo de DER:</p>
+<div id="bda">
+<a href="Imagens/DER_TI.png" target="_blank"><img src="Imagens/DER_TI.png"/></a>
+</div>
+<h2>MLR</h2>
+<h3>Modelo lógico relacional </h3>
+<p> Um modelo relacional é um modelo de dados representativo (ou de implementação), adequado a ser o modelo subjacente de um SGBD, um banco de dados construído puramente baseado no modelo relacional estará inteiramente normalizado. A ideia de modelo relacional se baseia no princípio de que as informações em uma base de dados podem ser consideradas como relações matemáticas e que podem ser representadas, de maneira uniforme, através do uso de tabelas onde as linhas representam as ocorrências de uma entidade e as colunas representam os atributos de uma entidade do modelo conceitual. </p>
+<p>Exemplo de modelo lógico relacional: </p>
+<div id="bda">
+<a href="Imagens/MLR.png" target="_blank"><img src="Imagens/MLR.png" /></a>
+</div>
+<h3>Principais Vantagens do Modelo Relacional: </h3>
+<ul>
+<li>Independência total dos dados;</li>
+<li>Visão múltipla dos dados;</li>
+<li>Redução acentuada na atividade de desenvolvimento. Particularmente para extração de dados para relatórios e consultas específicas do usuário;</li>
+<li>Maior segurança no acesso aos dados; </li>
+<li>Maior agilidade para consulta/atualização;</li>
+<li>Qualidade dos dados garantida por restrições de integridade. </li>
+</ul>
+<h2>História sobre a criação dos Bancos de Dados e Modelo Físico</h2>
+<p>Antigamente muitas empresas armazenavam seus dados em arquivos físicos, porém com o tempo a necessidade de haver alguma ferramenta para facilitar esse processo foi aumentando.</p>
+<p>Por volta do final dos anos 1970 surgiu um sistema baseado nas ideias de Edgar Frank Codd, um pesquisador da IBM que no começo da década havia realizado um artigo intitulado “A Relational Model of Data for Large Shared Data Banks”. Com esse sistema chamado de “Sistema R” também foi criado a linguagem de consulta estruturada (SQL - Structured Query Language).</p>
+<p>Com o passar do tempo muitos sistemas de banco de dados foram baseados no Sistema R. Hoje possuímos dois tipos de SGBDS (Sistema gerenciador de banco de dados), sendo eles: </p>
+<ul>
+<li>Relacionais: Modelam seus dados em formas de tabelas que se relacionam entre si, possuindo diversos atributos e tipos de dados diferentes. </li>
+<li>Não-relacionais(NoSQL): São sistemas onde não é utilizado SQL como linguagem de consulta, são bem conhecidos por sua facilidade no desenvolvimento, utilizando diversos modelos de dados, entre eles: documentos, gráficos, chave-valor e colunares</li>
+</ul>
+<p>Dentre os Principais SGBDS utilizados pelo mundo estão: OracleDB, MySQL, SQLServer, PostgreSQL e DB2. Cada um se destacando por diversos motivos, seja pela facilidade, segurança, recursos avançados, etc.</p>
+<h2>Regras Modelo Físico</h2>
+<ul>
+<li>Restrições são regras aplicadas nas colunas de uma tabela.</li>
+<li>São usadas para limitar os tipos de dados que são inseridos.</li>
+</ul>
+<p>Principais Constraints do SQL:</p>
+<ul>
+<li>NOT NULL</li>
+<li>UNIQUE</li>
+<li>PRIMARY KEY</li>
+<li>FOREIGN KEY </li>
+<li>CHECK</li>
+<li>DEFAULT</li>
+</ul>
+<p>Restrição NOT NULL:</p>
+<ul>
+<li>A constraint NOT NULL impõe a uma coluna a NÃO aceitar valores NULL. </li>
+<li>A constraint NOT NULL obriga um campo a sempre possuir um valor. </li>
+<li>Deste modo, não é possível inserir um registro (ou atualizar) sem entrar com um valor neste campo. </li>
+</ul>
+<p>Restrição UNIQUE </p>
+<ul>
+<li>A restrição UNIQUE identifica de forma única cada registro em uma tabela de um banco de dados. </li>
+<li>As constraints UNIQUE e PRIMARY KEY garantem a unicidade em uma coluna ou conjunto de colunas. </li>
+<li>Uma constraint PRIMARY KEY automaticamente possui uma restrição UNIQUE definida. </li>
+<li>Você pode ter várias constraints UNIQUE em uma tabela, mas apenas uma Chave Primária por tabela.</li>
+</ul>
+<p>Restrição PRIMARY KEY </p>
+<ul>
+<li>A constraint PRIMARY KEY identifica de forma única cada registro em uma tabela de banco de dados.</li>
+<li>Chaves Primárias devem conter valores únicos.</li>
+<li>Uma coluna de chave primária não pode conter valores NULL.</li>
+<li>Cada tabela deve ter uma chave primária e apenas uma chave primária.</li>
+</ul>
+<p>Restrição FOREIGN KEY </p>
+<ul>
+<li>Uma FOREIGN KEY (Chave Estrangeira) em uma tabela é um campo que aponta para uma chave primária em outra tabela.</li>
+</ul>
+<p>Restrição CHECK </p>
+<ul>
+<li>A constraint CHECK é usada para limitar uma faixa de valores que podem ser colocados em uma coluna.</li>
+<li>Se uma constraint CHECK for definida em uma única coluna ela permitirá apenas determinados valores para a coluna.</li>
+<li>Se a constraint CHECK for definida para a tabela, ela poderá limitar os valores em algumas colunas com base nos valores de outras colunas do registro.</li>
+
+</ul>
+<p>Restrição DEFAULT </p>
+<ul>
+<li>A restrição DEFAULT é usada para inserir um valor padrão em uma coluna.</li>
+<li>O valor padrão será adicionado a todos os novos registros caso nenhum outro valor seja especificado.</li>
+</ul>
+<h2>Modelo Físico</h2>
+<p>O modelo físico é um modelo de baixo nível onde se leva em consideração as limitações do SGBD e é formado por comandos SGBD para criar tabelas usando como referência o modelo lógico. </p>
+<p>Cada SGBD tem seus tipos de dados mas os principais são: numérico, data e tempo e string podendo ter a quantidade de caracteres fixa ou variável. </p>
+<p>Exemplo de modelo físico e lógico <a href="MLR e MF.pdf" target="_blank">Clique aqui</a></p>
+
+
+</div>
+
+</body>
+</html>
